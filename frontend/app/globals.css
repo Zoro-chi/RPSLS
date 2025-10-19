@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+input, select {
+  color: #222 !important;
+}
+
+input::placeholder {
+  color: #777 !important;
+}
