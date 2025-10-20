@@ -8,6 +8,7 @@ const config: HardhatUserConfig = {
   solidity: {
     profiles: {
       default: {
+        // Same compiler version as RPS.sol contract
         version: "0.4.26",
         settings: {
           optimizer: {
@@ -31,16 +32,9 @@ const config: HardhatUserConfig = {
       type: "http",
       chainType: "l1",
       url: process.env.SEPOLIA_RPC_URL?.trim() || "",
-      accounts: process.env.SEPOLIA_PRIVATE_KEY
-        ? [
-            (() => {
-              const key = process.env.SEPOLIA_PRIVATE_KEY.trim().replace(
-                /['"]/g,
-                ""
-              );
-              return key.startsWith("0x") ? key : `0x${key}`;
-            })(),
-          ]
+      // Use private key from .env if available, otherwise empty array
+      accounts: process.env.METAMASK_PRIVATE_KEY
+        ? [process.env.METAMASK_PRIVATE_KEY.trim()]
         : [],
     },
   },

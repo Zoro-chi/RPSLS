@@ -42,7 +42,7 @@ Install everything:
 yarn install
 ```
 
-Copy the env file and add your RPC URL and private key:
+Copy the .env.example to your .env file and add your RPC URL and private key:
 
 ```bash
 cp .env.example .env
@@ -86,5 +86,3 @@ Expected payoff calculation:
 - Expected value = 0
 
 Both players get 0 expected payoff when playing optimally, which is the definition of Nash equilibrium in a zero sum game.
-
-This is the same as regular Rock Paper Scissors (1/3 each move) but extended to 5 moves.

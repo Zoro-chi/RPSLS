@@ -88,7 +88,8 @@ export default function GameJoiner() {
       await tx.wait();
 
       alert("Successfully joined the game!");
-      await loadGameData(); // refresh the data
+      // refresh the data
+      await loadGameData();
     } catch (error: any) {
       console.error("Error joining game:", error);
       alert(`Failed to join game: ${error.message || "Unknown error"}`);
