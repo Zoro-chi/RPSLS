@@ -60,6 +60,8 @@ cp .env.example .env
 
 ## Nash Equilibrium for RPSLS
 
+#### Note: I researched Nash Equilibrium concept in game theory and applied it to the game.
+
 ### Answer
 
 The Nash equilibrium is to play each move with equal probability of 20% each (1/5).
